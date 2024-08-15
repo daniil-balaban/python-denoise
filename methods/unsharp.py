@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 import time
 
 path = os.path.dirname(os.path.realpath(__file__))
-obj = 'vert'
+obj = 'koala'
 filePath = f'{path}\\..\\{obj}\\{obj}'
-img = cv2.imread(f'{filePath}_non-local-denoise.jpg')
+img = cv2.imread(f'{filePath}-non-local-denoise-test-21-7-20.jpg')
 
 start = time.time()
 # Sharpen using unsharp + Gaussian blur
@@ -24,4 +24,4 @@ beta = -15  # Brightness control (0 means no change, positive values increase br
 brightened_image = cv2.convertScaleAbs(sharpened_image, alpha = alpha, beta = beta)
 print(time.time() - start)
 
-plt.imsave(f'{filePath}_sharp+bright.jpg', brightened_image)
+plt.imsave(f'{filePath}-sharp+bright-test-21-7-20.jpg', brightened_image)

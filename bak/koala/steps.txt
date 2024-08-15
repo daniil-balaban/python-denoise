@@ -1,0 +1,5 @@
+koala - original photo from nvidia article https://nvplay.ru/uploads/images/News/2018/07.12/grain-01.jpg
+koala_ph - photoshop: filter -> noise -> reduce noise: strenght 10, pres det 0, red col onise 100, shrp det 0, rem jpg art
+koala_denoise - cv2 fastNlMeansDenoising function with weights 10_7_21
+koala_sharp+bright - unsharp + brightness and contrast adj
+koala_nvd - nvidia neural network result

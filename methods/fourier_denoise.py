@@ -23,7 +23,7 @@ center_shift[crow - 4:crow + 4, ccol + 10:] = 1
 
 f_shift = np.fft.ifftshift(center_shift)
 denoised_image = np.fft.ifft2(f_shift)
-denoised_image = np.real(denoised_image)
+denoised_image = np.abs(denoised_image)
 print(time.time() - start)
 
-plt.imsave(f'{filePath}_fourier-denoise.jpg', denoised_image, cmap="grey")
+plt.imsave(f'{filePath}-fourier-denoise.jpg', denoised_image, cmap="grey")

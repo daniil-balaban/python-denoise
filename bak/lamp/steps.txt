@@ -1,0 +1,3 @@
+lamp - original photo from alive colors article https://alivecolors.com/img/examples/alivecolors/effects/noise-uniform.jpg
+lamp_non-local-denoise - cv2 fastNlMeansDenoising function with weights 20, 7, 21
+lamp_sharp+bright - unsharp method + brightness and contrast adj

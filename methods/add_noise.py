@@ -16,10 +16,7 @@ obj = 'car'
 filePath = f'{path}\\..\\{obj}\\{obj}'
 
 # Load a good quality picture
-image = cv2.imread(f'{filePath}1.jpg')
+image = cv2.imread(f'{filePath}.jpg')
+noised = cv2.cvtColor(add_gaussian_noise(image), cv2.COLOR_BGR2RGB)
 
-# Add Gaussian noise to the image
-b,g,r = cv2.split(add_gaussian_noise(image))   # get b,g,r
-noisy_image = cv2.merge([r,g,b]) # switch it to rgb
-
-plt.imsave(f'{filePath}_gauss-noise.jpg', noisy_image)
+plt.imsave(f'{filePath}-gauss-noise1.jpg', noised)
