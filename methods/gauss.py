@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 import os
 
 path = os.path.dirname(os.path.realpath(__file__))
-obj = 'koala'
+obj = 'new'
 filePath = f'{path}\\..\\{obj}\\{obj}'
-image = cv2.imread(f'{filePath}.jpg')
+image = cv2.imread(f'{filePath}.jpg', -1)
 #image = cv2.imread('lamp.jpg', cv2.IMREAD_GRAYSCALE)
 
 # Застосування фільтра Гаусса для зменшення шуму
-filtered_image = cv2.GaussianBlur(image, (5, 5), 0)
+filtered_image = cv2.GaussianBlur(image, (0, 0), 2)
 
 # Відображення результатів
 plt.figure(figsize=(10, 5))
